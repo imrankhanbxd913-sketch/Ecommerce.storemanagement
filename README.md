@@ -1,22 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce Management Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f4f6f8; margin:0; }
+    header { background:#111827; color:white; padding:20px; text-align:center; }
+    nav { text-align:center; margin-top:10px; }
+    nav a { margin:0 10px; color:#fff; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:800px; margin:40px auto; background:white; padding:25px; border-radius:10px; box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+    h1, h2, h3 { text-align:center; }
+    input, textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
+    button { width:100%; padding:10px; background:#2563eb; color:white; border:none; border-radius:6px; cursor:pointer; }
+    button:hover { background:#1e40af; }
+    .portfolio, .products, .contact { margin-top:20px; }
+    .portfolio p, .products p { margin:0 0 10px 0; }
+    .product-card { background:#f9f9f9; padding:15px; border-radius:10px; margin:10px 0; }
+    .msg { color:green; text-align:center; }
+  </style>
+</head>
+<body>
 
+<header>
+  <h1>Ecommerce Management</h1>
+  <nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-1. **Create a folder** on your computer, name it `ecommerce-portfolio`.
-2. **Save all website files** inside this folder:
-   - `index.html`
-   - `style.css` (agar separate CSS file hai)
-   - `script.js` (agar separate JS file hai)
-   - Images folder (agar koi images use hui hain)
-3. **Compress the folder**:
-   - Right click → Send to → Compressed (zipped) folder
-   - Name it `ecommerce-portfolio.zip`
+<div class="container">
+  <div class="portfolio" id="portfolio">
+    <h2>Portfolio Owner:</h2>
+    <p>NMuhammad Imran</p>
 
-Ab ye ZIP file **ready hai GitHub Pages me upload karne ke liye**.
+    <h2>Skills & Projects:</h2>
+    <p>- Ecommerce platform management</p>
+    <p>- Inventory & order tracking</p>
+    <p>- Analytics & sales reporting</p>
+    <p>- Customer management</p>
+  </div>
 
-**Upload Steps:**
-1. GitHub par login karein.
-2. New repository create karein: `ecommerce-portfolio` (Public).
-3. Repository me jaake: **Add file → Upload files → drag & drop ZIP content (extract folder first)**.
-4. Commit changes.
-5. Repository → Settings → Pages → Source: `main branch` → `/root` → Save.
-6. Thodi der me live URL milega: `https://username.github.io/ecommerce-portfolio/`
-# Ecommerce.storemanagement
+  <div class="products" id="products">
+    <h2>Products Showcase</h2>
+    <div class="product-card">
+      <h3>Product 1</h3>
+      <p>Description: High-quality product for your store.</p>
+      <p>Price: $50</p>
+    </div>
+    <div class="product-card">
+      <h3>Product 2</h3>
+      <p>Description: Top-selling product with excellent reviews.</p>
+      <p>Price: $80</p>
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2>Contact NMuhammad Imran</h2>
+    <input type="text" id="contactName" placeholder="Your Name" />
+    <input type="email" id="contactEmail" placeholder="Your Email" />
+    <textarea id="contactMessage" placeholder="Your Message" rows="4"></textarea>
+    <button onclick="sendMessage()">Send Message</button>
+    <p id="contactMsg" class="msg"></p>
+  </div>
+</div>
+
+<script>
+  function sendMessage(){
+    const name = document.getElementById('Muhammad Imran').value;
+    const email = document.getElementById('imrankhanjumwani786@gmail.com').value;
+    const message = document.getElementById('contactMessage').value;
+    if(!name || !email || !message){
+      document.getElementById('contactMsg').innerText = 'Please fill all fields';
+      return;
+    }
+    document.getElementById('contactMsg').innerText = 'Message sent successfully!';
+    document.getElementById('contactName').value='';
+    document.getElementById('contactEmail').value='';
+    document.getElementById('contactMessage').value='';
+  }
+</script>
+
+</body>
+</html>
+
